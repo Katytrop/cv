@@ -1,0 +1,78 @@
+.resume
+	padding-top: 100px
+	padding-bottom: 60px
+	background-color: $light
+	z-index: 1
+	&__subtitle
+		position: relative
+		text-align: center
+		@include circle
+		z-index: 10
+		&::before
+			left: 50%
+			transform: translateX(-50%)
+	&__title
+		text-align: center
+	&__wrapper
+		padding-left: 65px
+		margin-top: 60px
+		display: grid
+		grid-template-columns: repeat(2, 425px)
+		column-gap: 135px
+	&__column
+		&_title
+			position: relative
+			padding-left: 35px
+			&::before
+				content: ''
+				position: absolute
+				left: -7px
+				top: 50%
+				transform: translateY(-50%)
+				width: 15px
+				height: 15px
+				background-color: $main
+				border-radius: 100%
+		ul
+			list-style-type: none
+			li
+				position: relative
+				&::after
+					content: ''
+					width: 1px
+					height: calc( 100% + 8px )
+					position: absolute
+					top: -8px
+					left: 0
+					background-color: #000
+	&__item
+		position: 
+		&::before
+			content: ''
+			height: 1px
+			width: 45px
+			position: absolute
+			background-color: #000
+			top: 68px
+		&_head
+			position: relative
+			padding: 45px 0 0 100px
+		&_icon
+			position: absolute
+			top: 50px
+			left: 45px
+			@include circle
+			z-index: 10
+			img
+				position: absolute
+				left: 17px
+				top: 14px
+		&_body
+			padding-left: 43px
+			margin-top: 12px
+			font-size: 12px
+			line-height: 18px
+		&_location
+			font-size: 12px
+			line-height: 18px
+			margin-top: 5px

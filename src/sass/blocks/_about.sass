@@ -1,0 +1,48 @@
+.about
+	padding-top: 100px
+	padding-bottom: 60px
+	&__wrapper
+		display: flex
+	&__photo
+		img
+			width: 400px
+			height: 100%
+	&__descr
+		padding-left: 70px
+		padding-top: 6px
+		.divider
+			margin: 0
+	&__subtitle
+		position: relative
+		@include circle
+		padding-left: 12px
+		padding-top: 1px
+	&__title
+		font-weight: bold
+		margin-top: 6px
+	&__text
+		font-size: 14px
+		margin-top: 20px
+	&__skills
+		margin-top: 40px
+		display: grid
+		grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px)
+		grid-auto-rows: 1fr
+		column-gap: 50px
+		row-gap: 30px
+		&_item
+			display: grid
+			grid-template-columns: 40px 200px
+			column-gap: 20px
+		&_icon
+			position: relative
+			padding: 15px 0 0 15px
+			@include circle
+			&::before
+				top: 0
+		&_text
+			font-size: 12px
+			line-height: 18px
+
+		
+	
