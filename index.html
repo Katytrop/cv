@@ -9,6 +9,7 @@
 	<meta name="title" content="My portfolio">
 	<meta name="description" content="Here you can see my work and learn more about me.">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="css/style.min.css">
 	
 	<!-- Open Graph / Facebook -->
@@ -53,26 +54,26 @@
 				</ul>
 			</nav>
 			<div class="menu__social">
-				<a href="https://github.com/Katytrop"><img src="icons/social/Github2.svg" alt="github"></a>
-				<a href="https://instagram.com/Katytrop"><img src="icons/social/Instagram2.svg" alt="instagram"></a>
-				<a href="tg://resolve?domain=Katytrop"><img src="icons/social/telegram.svg" alt="telegram"></a>
+				<a target="blank" href="https://github.com/Katytrop"><img src="icons/social/Github2.svg" alt="github"></a>
+				<a target="blank" href="https://instagram.com/Katytrop"><img src="icons/social/Instagram2.svg" alt="instagram"></a>
+				<a target="blank" href="tg://resolve?domain=Katytrop"><img src="icons/social/telegram.svg" alt="telegram"></a>
 			</div>
 		</div>
 		<div class="menu__overlay"></div>
 	</div>
 
-	<section class="promo">
+	<section id="up" class="promo">
 		<div class="hamburger">
 			<span></span>
 			<span class="long"></span>
 			<span></span>
 		</div>
 		<div class="container">
-			<div class="title title_fz16 promo__subtitle">My name is Ekaterina</div>
-			<h1 class="title title_fz48 promo__title">I am a JUNIOR <br> FRONT-END DEVELOPER</h1>
-			<div class="promo__buttons">
+			<div class="title title_fz16 promo__subtitle animate__animated animate__fadeInDownBig">My name is Ekaterina</div>
+			<h1 class="title title_fz48 promo__title animate__animated animate__fadeInDownBig">I am a JUNIOR <br> FRONT-END DEVELOPER</h1>
+			<div class="promo__buttons animate__animated animate__fadeInDownBig">
 				<a href="#portfolio" class="btn promo__link">Portfolio</a>
-				<a href="#about" class="promo__link">About me</a>
+				<a href="#about" class="promo__link_about">About me</a>
 			</div>
 		</div>
 	</section>
@@ -318,28 +319,30 @@
 						<a href="https://instagram.com/Katytrop" class="contacts__link"><img src="icons/social/Instagram2.svg" alt="instagram"></a>
 					</div>
 					<div class="title title_fz14 contacts__text">Or leave your details and I will write to you myself:</div>
-
-					<form action="" class="contacts__form">
+					
+					<script type="text/javascript">var submitted=false;</script>
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+					<form class="contacts__form" method="post" 
+					action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScWUFYU-VCwYp4niiP9LPRjVffdItgKs-fM4ctUwmFfv1BygA/formResponse"
+					target="hidden_iframe" onsubmit="submitted=true;">
 						<div class="contacts__input">
-							<input required name="name" id="name" type="text">
+							<input required name="entry.1675584929" id="name" type="text">
 							<label for="name">Your name</label>
 						</div>
 						<div class="contacts__input">
-							<input required name="email" id="email" type="email">
-							<label for="email">Your email</label>
+							<input required name="entry.2038306385" id="phone" type="phone">
+							<label for="phone">Your phone</label>
 						</div>
 						<div class="contacts__textarea">
-							<textarea name="text" id="text"></textarea>
+							<textarea name="entry.1069195769" id="text"></textarea>
 							<label for="text">Your message</label>
 						</div>
 						<div class="contacts__triggers">
-							<button class="btn btn_contacts">Send a message</button>
+							<button type="submit" class="btn btn_contacts">Send a message</button>
 							<div class="contacts__polisy">
 								<input required type="checkbox">
 								<span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a> </span>
-
 							</div>
-
 						</div>
 					</form>
 				</div>
@@ -347,6 +350,9 @@
 		</div>
 	</section> 
 
+	<a href="#up" class="pageup">
+		<img src="icons/up.svg" alt="up">
+	</a>
 
 	<script src="js/script.js"></script>
 </body>
