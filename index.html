@@ -183,7 +183,7 @@
 		</div>
 	</section>
 
-	<section id="skills" class="skills">
+ 	<section id="skills" class="skills">
 		<div class="container">
 			<div class="title title_fz16 skills__subtitle">Skills</div>
 			<div class="title title_fz36 skills__title">What I use at work</div>
@@ -204,21 +204,23 @@
 					<div class="title title_fz14 skills__item_title">Java Script</div>
 					<div class="skills__item_text">This programming language allows you to bring anything to life: sliders, windows, tooltips, tabs, receiving data from the server, and much more.</div>
 				</div>
-				<div class="skills__item">
+				<!-- <div class="skills__item">
 					<div class="skills__item_img"><img src="icons/skills/jquery.svg" alt="jquery"></div>
 					<div class="title title_fz14 skills__item_title">Jquery</div>
 					<div class="skills__item_text">The Jquery library will speed up development. Without the need to integrate it into the project, we will not, but the skill of working with it is present</div>
-				</div>
+				</div> -->
+
 				<div class="skills__item">
 					<div class="skills__item_img"><img src="icons/skills/react.svg" alt="react"></div>
 					<div class="title title_fz14 skills__item_title">React</div>
 					<div class="skills__item_text">This library allows you to create web applications. We can create the most interactive product for your purposes</div>
 				</div>
-				<div class="skills__item">
+
+				<!-- <div class="skills__item">
 					<div class="skills__item_img"><img src="icons/skills/node.js.svg" alt="node"></div>
 					<div class="title title_fz14 skills__item_title">Node.js</div>
 					<div class="skills__item_text">This platform allows you to create a backend for your product - "brains" that will perform actions that the user does not see</div>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="skills__rating">
@@ -267,9 +269,9 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> 
 
-	<section id="portfolio" class="portfolio">
+ 	<section id="portfolio" class="portfolio">
 		<div class="container">
 			<div class="title title_fz16 portfolio__subtitle">Portfolio</div>
 			<div class="title title_fz36 portfolio__title">My works</div>
@@ -299,7 +301,7 @@
 		</div>
 	</section>
 
-	<section id="contacts" class="contacts">
+ 	<section id="contacts" class="contacts">
 		<div class="container">
 			<div class="contacts__wrapper">
 				<div class="contacts__photo">
@@ -327,15 +329,23 @@
 							<label for="email">Your email</label>
 						</div>
 						<div class="contacts__textarea">
-							<textarea required name="text" id="text"></textarea>
+							<textarea name="text" id="text"></textarea>
 							<label for="text">Your message</label>
 						</div>
-						<button class="btn btn_contacts" >Send a message</button>
+						<div class="contacts__triggers">
+							<button class="btn btn_contacts">Send a message</button>
+							<div class="contacts__polisy">
+								<input required type="checkbox">
+								<span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a> </span>
+
+							</div>
+
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> 
 
 
 	<script src="js/script.js"></script>
