@@ -27,9 +27,13 @@
 	display: none
 	&_show
 		display: block
-	img
-		width: 100%
-	
+		svg
+			fill: $main
+			&:hover
+				fill: #caa2c0
+				border-radius: 100% 
+				border: 2px solid $main
+				
 @import 'blocks/_promo'
 @import 'blocks/_menu'
 @import 'blocks/_title'
