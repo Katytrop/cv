@@ -1,4 +1,4 @@
-// меню гамбургер
+// menu hamburger
 const ham = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const closeElem = document.querySelector('.menu__close');
@@ -19,7 +19,7 @@ menu.addEventListener("click",function(e) {
   }
 });
 
-// полоска скиллов
+// skills counts
 const counters = document.querySelectorAll('.skills__rating_counter');
 const lines = document.querySelectorAll('.skills__rating_line span');
 
@@ -27,7 +27,7 @@ counters.forEach((item, i) => {
 	lines[i].style.width = item.innerHTML;
 })
 
-// кнопка вверх
+// button up
 
 const btnUp = document.querySelector('.pageup');
 
@@ -52,7 +52,7 @@ function backToTop() {
 window.addEventListener ('scroll', trackScroll);
 btnUp.addEventListener ('click', backToTop);
 
-// плавеый скролл
+// scroll
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
@@ -66,3 +66,22 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+// thanks for message 
+const thanks = document.querySelector('.thanks');
+const btnContacts = document.querySelector('.btn_contacts');
+const btnThanks = document.querySelector('.btn_thanks');
+
+const thanksHidden = () => {
+  thanks.classList.remove('hidden');
+}
+const thanksClose = (e) => {
+  if  (e.target.classList.contains('btn_thanks')) {
+    thanks.classList.add('hidden');
+  } 
+}
+btnThanks.addEventListener('click', thanksClose);
+
+// mask
+let inputTel = document.querySelector('input[type="tel"]');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(inputTel);

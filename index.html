@@ -55,7 +55,7 @@
 			</nav>
 			<div class="menu__social">
 				<a target="blank" href="https://github.com/Katytrop"><img src="icons/social/Github2.svg" alt="github"></a>
-				<a target="blank" href="https://instagram.com/Katytrop"><img src="icons/social/Instagram2.svg" alt="instagram"></a>
+				<a target="blank" href="https://discord.com/users/920202859969126460/"><img src="icons/social/discord.svg" alt="discord"></a>
 				<a target="blank" href="tg://resolve?domain=Katytrop"><img src="icons/social/telegram.svg" alt="telegram"></a>
 			</div>
 		</div>
@@ -320,17 +320,17 @@
 					</div>
 					<div class="title title_fz14 contacts__text">Or leave your details and I will write to you myself:</div>
 					
-					<script type="text/javascript">var submitted=false;</script>
-					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+					<script>var submitted=false;</script>
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {thanksHidden()}"></iframe>
 					<form class="contacts__form" method="post" 
 					action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScWUFYU-VCwYp4niiP9LPRjVffdItgKs-fM4ctUwmFfv1BygA/formResponse"
-					target="hidden_iframe" onsubmit="submitted=true;">
+					target="hidden_iframe" onsubmit="submitted=true;" id="form">
 						<div class="contacts__input">
 							<input required name="entry.1675584929" id="name" type="text">
 							<label for="name">Your name</label>
 						</div>
 						<div class="contacts__input">
-							<input required name="entry.2038306385" id="phone" type="phone">
+							<input required name="entry.2038306385" id="phone" type="tel" data-reg="^((\+7|7|8)+([0-9]){10})$">
 							<label for="phone">Your phone</label>
 						</div>
 						<div class="contacts__textarea">
@@ -357,6 +357,15 @@
 		247.8 144 256 144s16.38 3.125 22.62 9.375l112 112C403.1 277.9 403.1 298.1 390.6 310.6z"/></svg>
 	</a>
 
+	<div class="thanks hidden">
+		<div class="thanks__content">
+			<div class="thanks__text">Thanks for your feedback, I will contact you shortly!</div>
+			<button class="btn btn_thanks" >Close</button>
+		</div>
+	</div>
+
+
+	<script src="js/inputmask.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
