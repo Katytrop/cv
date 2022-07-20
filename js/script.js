@@ -14,7 +14,7 @@ closeElem.addEventListener('click', () => {
 
 menu.addEventListener("click",function(e) {
 
-  if((e.target) && (e.target.nodeName == "LI" || e.target.nodeName == "A")){
+  if((e.target) && (e.target.nodeName == "LI" || e.target.nodeName == "A" || e.target.classList.contains('menu__overlay'))) {
       this.classList.remove('active');
   }
 });

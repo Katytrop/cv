@@ -29,8 +29,8 @@
 			justify-content: space-evenly
 	.portfolio
 		&__wrapper
-			grid-template-columns: repeat(auto-fit, 280px)
-			grid-auto-rows: 280px
+			grid-template-columns: repeat(2, 380px)
+			grid-auto-rows: 250px
 			justify-content: space-evenly
 			row-gap: 35px
 			.horizontal, .horizontal2
@@ -49,7 +49,7 @@
 	.container 
 		max-width: 720px
 	.promo
-		background-position-x: 60%
+		background-position-x: 10%
 	.title
 		&_fz48
 			font-size: 42px
@@ -66,7 +66,14 @@
 			grid-auto-rows: 85px
 			row-gap: 10px
 			&_item
-				grid-template-columns: 40px 300px
+				grid-template-columns: 40px 340px
+				&:nth-child(2)
+					grid-column: 1 / 2
+					grid-row: 2 / 3
+				&:nth-child(3)
+					grid-column: 1 / 2
+					grid-row: 3 / 4
+					margin: 0
 	.resume
 		padding-top: 70px
 		&__wrapper
@@ -91,9 +98,8 @@
 				width: 300px
 	.portfolio
 		&__wrapper
-			.vertical
-				grid-row: unset
-				grid-column: unset
+			grid-template: repeat(3, 230px) / repeat(2, 350px)
+			grid-auto-rows: 230px
 	.contacts
 		padding-top: 70px
 		&__wrapper
@@ -111,7 +117,7 @@
 		&_fz48
 			font-size: 30px
 	.promo
-		background-position-x: 70%
+		background-position-x: 30%
 		&__title
 			line-height: 50px
 			width: 415px
@@ -144,6 +150,10 @@
 				grid-template: minmax(21px, auto) 14px/350px 40px
 			&_line
 				width: 400px
+	.portfolio
+		&__wrapper
+			grid-template: repeat(3, 230px) / repeat(1, 350px)
+			grid-auto-rows: 230px
 	.contacts
 		padding-top: 70px
 		&__form
@@ -153,7 +163,6 @@
 @media (max-width: 576px)
 	.container 
 		max-width: 370px
-		padding: 10px
 	.title
 		&_fz48
 			font-size: 24px
@@ -162,11 +171,18 @@
 		&_fz36
 			font-size: 30px
 	.promo
+		background: url(../img/main-mini.jpg) center center/cover no-repeat
+		background-position-x: 10%
+		padding-left: 0
 		&__title
 			line-height: 40px
 			width: 300px
 		&__buttons
 			margin-top: 40px
+			flex-direction: column
+			a
+				&:nth-child(2)
+					margin-top: 30px	
 	.menu
 		&__block
 			width: 250px
@@ -176,6 +192,9 @@
 			grid-template-columns: 350px
 			&_item
 				grid-template-columns: 40px 280px
+				width: 280px
+				&:nth-child(3)
+					width: 280px
 	.resume
 		&__wrapper
 			padding-left: 0
@@ -192,6 +211,10 @@
 				grid-template: minmax(21px, auto) 14px/330px 40px
 			&_line
 				width: 370px
+	.btn
+		&_contacts
+			margin: 0 auto
+			margin-top: 20px
 	.contacts
 		padding-top: 70px
 		&__form
@@ -213,19 +236,25 @@
 
 @media (max-width: 420px)
 	.container 
-		max-width: 280px
+		max-width: 300px
 	.title
 		&_fz48
-			font-size: 18px
+			font-size: 20px
+			text-align: center
 		&_fz16
-			font-size: 12px
+			font-size: 17px
+			text-align: center
 		&_fz36
 			font-size: 22px
 	.promo
 		&__buttons
 			margin-top: 95px
+			width: 222px
 		&__title
 			width: 280px
+		&__subtitle
+			&::before
+				left: 15%
 	.about
 		padding-bottom: 0
 		&__photo
@@ -237,6 +266,8 @@
 			grid-auto-rows: 130px
 			&_item
 				grid-template-columns: 40px 230px
+		&__subtitle
+			text-align: left
 	.resume
 		&__wrapper
 			grid-template-columns: 300px
@@ -247,3 +278,10 @@
 				grid-template: minmax(21px, auto) 14px/250px 40px
 			&_line
 				width: 290px
+	.portfolio
+		&__wrapper
+			grid-template: repeat(3, 200px) / repeat(1, 290px)
+			grid-auto-rows: 200px
+	.contacts
+		&__subtitle
+			text-align: left
