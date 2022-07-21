@@ -1,0 +1,32 @@
+.sidepanel
+	position: fixed
+	top: 235px
+	left: -120px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	width: 350px
+	height: 350px
+	z-index: 3
+	&__link
+		img
+			width: 20px
+			height: 20px
+			&:hover
+				width: 30px
+				height: 30px
+			&:first-child
+				transform: rotate(-90deg)
+	&__divider
+		width: 2px
+		height: 70px
+		background-color: $black
+	&__text
+		height: 150px
+		width: 25px
+		span
+			transform: rotate(-90deg) translate(-40%, -180%)
+			display: block
+			font-weight: bold
+			width: 110px

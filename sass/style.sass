@@ -1,0 +1,76 @@
+@import 'base/_variables'
+@import 'base/_mixins'
+	
+*
+	font-family: 'Poppins', sans-serif
+	margin: 0
+	padding: 0
+	color: $black
+	//border: 1px solid red
+
+body
+	position: relative
+
+.container
+	width: 1140px
+	margin: 0 auto
+
+.divider
+	background-color: $main
+	width: 60px
+	height: 3px
+	margin: 25px auto 0 auto
+
+.pageup
+	position: fixed
+	bottom: 40px
+	right: 40px
+	width: 40px
+	height: 40px
+	cursor: pointer
+	display: none
+	&_show
+		display: block
+		svg
+			fill: $main
+			&:hover
+				fill: #caa2c0
+				border-radius: 100% 
+				border: 2px solid $main
+.thanks
+	position: fixed
+	top: 0
+	left: 0
+	height: 100vh
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	background: rgba(0, 0, 0, 0.5) 
+	text-align: center
+	&.hidden
+		display: none
+	&__content
+		width: 300px
+		height: 200px
+		border-radius: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		background-color: $light
+
+
+@import 'blocks/_promo'
+@import 'blocks/_menu'
+@import 'blocks/_title'
+@import 'blocks/_button'
+@import 'blocks/_sidepanel'
+@import 'blocks/_about'
+@import 'blocks/_resume'
+@import 'blocks/_skills'
+@import 'blocks/_portfolio'
+@import 'blocks/_contacts'
+
+@import 'base/_media'
