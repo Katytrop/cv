@@ -6,13 +6,16 @@
 	&__subtitle
 		position: relative
 		text-align: center
-		@include circle
 		z-index: 10
+		@include circle
+		@include animation-subtitle
 		&::before
 			left: 50%
 			transform: translateX(-50%)
+		
 	&__title
 		text-align: center
+		@include animation-title
 	&__wrapper
 		padding-left: 65px
 		margin-top: 60px

@@ -4,11 +4,13 @@
 		position: relative
 		text-align: center
 		@include circle
+		@include animation-subtitle
 		&::before
 			left: 50%
 			transform: translateX(-50%)
 	&__title
 		text-align: center
+		@include animation-title
 	&__wrapper
 		margin-top: 60px
 		display: grid

@@ -10,5 +10,21 @@
 		background: $main
 		z-index: -1
 
+@mixin animation-subtitle
+	transform: translate(0px, -120%)
+	opacity: 0
+	transition: all 0.8s ease 0.4s
+	&.active
+		transform: translate(0px, 0%)
+		opacity: 1
+		transition: all 0.8s ease 0.4s
 
+@mixin animation-title
+	transform: translate(0px, -120%)
+	opacity: 0
+	transition: all 0.8s ease 0s
+	&.active
+		transform: translate(0px, 0%)
+		opacity: 1
+		transition: all 0.8s ease 0s
 		
